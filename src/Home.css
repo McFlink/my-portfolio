@@ -8,10 +8,10 @@
 .navbar-row {
   display: flex;
   flex: 1;
-  justify-content: end;
+  justify-content: start;
   align-items: center;
   max-height: 4rem;
-  margin-right: 10%;
+  margin-left: 10%;
   margin-top: 3%;
 }
 
