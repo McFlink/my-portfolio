@@ -6,6 +6,7 @@ import pixabayImg from "./assets/Images/pixabay.png";
 import weatherAppImg from "./assets/Images/weatherapp.png";
 import webshopImg from "./assets/Images/webshop.png";
 import cvImg from "./assets/Images/cv.png";
+import defaultImg from "./assets/Images/defaultImg.jpg";
 
 const Projects = () => {
   const projects = [
@@ -40,7 +41,7 @@ const Projects = () => {
     {
       title: "Polarmotor.se",
       description: "Motorcycle shop.",
-      image: "project4.jpg",
+      image: defaultImg,
       link: "#",
       technologies: ["React", "Firebase", "Bootstrap CSS"],
     },
