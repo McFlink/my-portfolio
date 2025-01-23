@@ -2,6 +2,10 @@ import React from "react";
 import "./Projects.css";
 import personImg from "./assets/Images/person.png";
 import aniadvImg from "./assets/Images/ani-adv-game.png";
+import pixabayImg from "./assets/Images/pixabay.png";
+import weatherAppImg from "./assets/Images/weatherapp.png";
+import webshopImg from "./assets/Images/webshop.png";
+import cvImg from "./assets/Images/cv.png";
 
 const Projects = () => {
   const projects = [
@@ -9,29 +13,29 @@ const Projects = () => {
       title: "Kids Game",
       description: "A game I built for my daughter, 6yo.",
       image: aniadvImg,
-      link: "#",
-      technologies: ["React", "Node.js", "MongoDB"],
+      link: "https://github.com/McFlink/AnimalAdventure",
+      technologies: ["React", "ASP.NET", "SQL Server"],
     },
     {
       title: "Weather App",
-      description: "Another awesome project.",
-      image: personImg,
-      link: "#",
-      technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+      description: "Weather App using OpenWeather API.",
+      image: weatherAppImg,
+      link: "https://mcflink.github.io/Weather-forecast/",
+      technologies: ["Vue.js", "CSS", "JavaScript"],
     },
     {
-      title: "Project 3",
+      title: "Pixabay Search Engine",
       description: "(school project).",
-      image: "project3.jpg",
-      link: "#",
+      image: pixabayImg,
+      link: "https://mcflink.github.io/pixabay-frontend/",
       technologies: ["ASP.NET", "EF CORE", "SQL Server"],
     },
     {
-      title: "Webshop",
+      title: "Fishing Baits Webshop",
       description: "(school project).",
-      image: "project4.jpg",
-      link: "#",
-      technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+      image: webshopImg,
+      link: "https://github.com/McFlink/Fishing-Baits-Webshop",
+      technologies: ["Razor Pages", "Sql Server", "Bootstrap/CSS"],
     },
     {
       title: "Polarmotor.se",
@@ -39,6 +43,13 @@ const Projects = () => {
       image: "project4.jpg",
       link: "#",
       technologies: ["React", "Firebase", "Bootstrap CSS"],
+    },
+    {
+      title: "CV",
+      description: "My CV.",
+      image: cvImg,
+      link: "https://mcflink.github.io/CV/",
+      technologies: ["HTML", "CSS", "CSS Grid"],
     },
   ];
 

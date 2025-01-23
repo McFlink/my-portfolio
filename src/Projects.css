@@ -6,7 +6,8 @@
 }
 
 .project-card {
-  width: 280px;
+  width: 18rem;
+  height: 24rem;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
