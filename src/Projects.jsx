@@ -12,38 +12,38 @@ const Projects = () => {
   const projects = [
     {
       title: "Kids Game",
-      description: "A game I built for my daughter, 6yo.",
+      description: "A game I built for my daughter",
       image: aniadvImg,
       link: "https://github.com/McFlink/AnimalAdventure",
-      technologies: ["React", "ASP.NET", "SQL Server"],
+      technologies: ["React", "ASP.NET", "MSSQL"],
     },
     {
       title: "Weather App",
-      description: "Weather App using OpenWeather API.",
+      description: "Uing OpenWeather API.",
       image: weatherAppImg,
       link: "https://mcflink.github.io/Weather-forecast/",
-      technologies: ["Vue.js", "CSS", "JavaScript"],
+      technologies: ["Vue.js", "CSS", "JS"],
     },
     {
-      title: "Pixabay Search Engine",
+      title: "Pixabay Search NGIN",
       description: "(school project).",
       image: pixabayImg,
       link: "https://mcflink.github.io/pixabay-frontend/",
-      technologies: ["ASP.NET", "EF CORE", "SQL Server"],
+      technologies: ["ASP.NET", "EF CORE", "MSSQL"],
     },
     {
       title: "Fishing Baits Webshop",
       description: "(school project).",
       image: webshopImg,
       link: "https://github.com/McFlink/Fishing-Baits-Webshop",
-      technologies: ["Razor Pages", "Sql Server", "Bootstrap/CSS"],
+      technologies: ["Razor Pages", "MSSQL", "BS"],
     },
     {
       title: "Polarmotor.se",
       description: "Motorcycle shop.",
       image: defaultImg,
       link: "#",
-      technologies: ["React", "Firebase", "Bootstrap CSS"],
+      technologies: ["React", "Firebase", "BS/CSS"],
     },
     {
       title: "CV",
@@ -68,7 +68,7 @@ const Projects = () => {
               <img src={project.image} alt={project.title} />
             </div>
             <div className="card-body">
-              <h3>{project.title}</h3>
+              <h5>{project.title}</h5>
               <p>{project.description}</p>
               <div className="technologies">
                 {project.technologies.map((tech, i) => (
