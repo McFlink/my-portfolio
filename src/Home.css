@@ -43,7 +43,7 @@
 
 .fullstack-title {
   position: absolute;
-  top: -2%;
+  top: 0%;
   left: 57%;
   transform: translate(-50%, -50%);
   font-family: "Courier New", Courier, monospace;
@@ -58,10 +58,10 @@
 .profile-pic {
   position: absolute;
   top: 62%;
-  left: 65%;
+  left: 68%;
   transform: translate(-50%, -40%) perspective(1000px) rotateY(10deg);
   mix-blend-mode: multiply;
-  width: 75%;
+  width: 70%;
   z-index: 1;
   transition: transform 0.5s ease;
 }

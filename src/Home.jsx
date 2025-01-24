@@ -61,6 +61,27 @@ const Home = () => {
             </p>
             <p>I love coding.</p>
             <p>Check out a selection of my projects to the right.</p>
+            <p>
+              <span>
+                <strong>Education:</strong> .NET Developer EXAM - 2025,
+                including
+              </span>
+            </p>
+            <ul>
+              <li>C#</li>
+              <li>Javascript</li>
+              <li>ASP.NET</li>
+              <li>Vue.js</li>
+              <li>Entity Framework</li>
+              <li>Blazor</li>
+              <li>React</li>
+              <li>HTML/CSS</li>
+              <li>Microservice archtecture</li>
+              <li>Cloud</li>
+              <li>Node.js</li>
+              <li>MSSQL</li>
+              <li>MongoDB</li>
+            </ul>
           </div>
           <span className="profile-pic-borderbox"></span>
           <img className="profile-pic" src={profilePic} alt="image" />
