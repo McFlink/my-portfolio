@@ -73,3 +73,12 @@
   font-size: 0.9rem;
   color: #333;
 }
+
+@media (max-width: 520px) {
+  .project-card {
+    width: 25rem;
+    height: 20rem;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+  }
+}
