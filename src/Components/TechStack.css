@@ -1,0 +1,16 @@
+.tech-icons {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 🔥 exakt 7 per rad */
+  gap: 2rem;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+.tech-icons i {
+  font-size: 3rem; /* 👈 ändra storlek här */
+  transition: transform 0.3s ease;
+}
+
+.tech-icons i:hover {
+  transform: scale(1.1);
+}

@@ -1,196 +1,22 @@
 .home-container {
   font-family: "Poppins", sans-serif;
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background: linear-gradient(to top, #70a4b9, #ffffff);
-}
-
-.navbar-row {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  max-height: 4rem;
-  width: 30%;
-  margin-left: 10%;
-  margin-top: 3%;
-}
-
-.navbar-row a {
-  margin: 0 1rem;
-  text-decoration: none;
-}
-
-.content-row {
-  display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.left-box,
-.right-box {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-  justify-content: center;
-  height: 100%;
-}
-
-.projects {
-  margin-top: 8%;
-}
-
-.fullstack-title {
-  position: absolute;
-  top: 0%;
-  left: 57%;
-  transform: translate(-50%, -50%);
-  font-family: "Courier New", Courier, monospace;
-  font-size: 5rem;
-  letter-spacing: 0.8rem;
-  background: linear-gradient(to right, #000000, #969696);
-  color: rgb(255, 255, 255);
-  border-radius: 15px;
-  padding: 0 7rem;
-}
-
-.profile-pic {
-  position: absolute;
-  top: 57%;
-  left: 72%;
-  transform: translate(-50%, -40%) perspective(1000px) rotateY(10deg);
-  mix-blend-mode: multiply;
-  width: 66%;
-  z-index: 1;
-  transition: transform 0.5s ease;
-}
-
-.about {
-  display: flex;
-  flex-direction: column;
-  margin-top: 6%;
-  margin-left: 15%;
-  margin-right: 30%;
   width: 100%;
-  height: 29%;
-  text-align: start;
-  font-size: 14px;
-  border-bottom: 1px solid rgb(172, 171, 171);
-}
-
-.education-list {
-  width: 65%;
-}
-
-ul {
-  list-style-type: none;
-}
-
-ul li {
   position: relative;
-  padding: 5px 10px;
-  margin: 5px 0;
-  font-size: 12px;
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
-  color: white;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
-ul li:hover {
-  transform: translateX(10px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+.content-container {
+  width: 50%;
+  background: linear-gradient(to left, #050518, #120c36);
+  box-shadow: -30px 0 40px -20px #050518, 30px 0 40px -20px #090520;
 }
 
-ul li::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -10px;
-  width: 10px;
-  height: 100%;
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
-  border-radius: 5px 0 0 5px;
-  transition: left 0.3s ease;
+body.modal-open {
+  overflow: hidden;
+  pointer-events: none;
 }
 
-ul li:hover::before {
-  left: -30px;
-}
-
-ul li::after {
-  content: "→";
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-/* Show the arrow on hover */
-/* ul li:hover::after {
-  opacity: 1;
-} */
-
-@media (max-width: 520px) {
-  .home-container {
-    background: linear-gradient(to top, #509bbb, #ffffff);
-    display: block;
-    width: 81vh;
-    padding: 15px;
-    height: 100%;
-  }
-
-  .navbar-row {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .about {
-    margin: 22% auto;
-    font-size: 1.5rem;
-  }
-
-  .education-list {
-    width: 93%;
-    font-size: 1.5rem;
-    margin-bottom: 0;
-  }
-
-  .content-row {
-    display: block;
-  }
-
-  .profile-pic {
-    position: absolute;
-    top: -1%;
-    left: 13%;
-    transform: translate(-50%, -40%) perspective(1000px) rotateY(10deg);
-    mix-blend-mode: multiply;
-    width: 46%;
-    z-index: 1;
-    transition: transform 0.5s ease;
-  }
-
-  .fullstack-title {
-    position: absolute;
-    top: -55%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    font-family: "Courier New", Courier, monospace;
-    font-size: 3rem;
-    letter-spacing: 0.1rem;
-    background: linear-gradient(to right, #000000, #969696);
-    color: rgb(255, 255, 255);
-    border-radius: 15px;
-    padding: 0 2rem;
-  }
-
-  .projects {
-    margin: 0;
-  }
+.e-dlg-container {
+  pointer-events: auto !important;
 }

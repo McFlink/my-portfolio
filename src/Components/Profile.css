@@ -1,0 +1,88 @@
+.profile-container {
+  margin-top: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.name {
+  color: rgb(250, 173, 29);
+}
+
+.typing-text {
+  overflow: hidden;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  /* animation: typing 2s steps(70, end) forwards, blink 1s step-end infinite; */
+  animation: typing 2s steps(50, end) forwards;
+  font-size: 2.4rem;
+  font-family: "Fira Code", monospace;
+}
+
+.profile-pic {
+  width: 40%;
+  height: auto;
+  border-radius: 10%;
+  object-fit: cover;
+  margin-top: 4%;
+}
+
+.typing-text.done {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 49%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.about-me {
+  width: 80%;
+  font-size: 0.9rem;
+  margin-top: 8rem;
+  text-align: left;
+}
+
+.about-me h4 {
+  width: 18%;
+  text-align: left;
+  margin-bottom: 1.3rem;
+}
+
+.about-me p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.tech-stack-container {
+  width: 80%;
+  font-size: 0.9rem;
+  margin-top: 10rem;
+  text-align: left;
+}
+
+.tech-stack-container h4 {
+  width: 20%;
+  text-align: left;
+  margin-bottom: 3rem;
+}

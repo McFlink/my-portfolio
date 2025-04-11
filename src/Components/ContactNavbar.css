@@ -1,0 +1,46 @@
+.navbar-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+  max-height: 4rem;
+  position: fixed;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.6s ease;
+  z-index: 10;
+}
+
+.navbar-row.scrolled {
+  flex-direction: column;
+  top: 10rem;
+  left: 3rem;
+  transform: none;
+  align-items: center;
+}
+
+.navbar-row.scrolled .contact-icon {
+  margin-left: 25px;
+}
+
+.navbar-row a {
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.navbar-row a:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
+}
+
+.contact-icon {
+  transition: transform 0.3s ease;
+  color: #4d4dff;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+  color: rgb(255, 255, 255);
+}
