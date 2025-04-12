@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { GrLinkedin, GrGithub, GrYoutube, GrContact } from "react-icons/gr";
 import "./ContactNavbar.css";
 
-const ContactNavbar = ({ setModalOpen }) => {
+const ContactNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -47,7 +47,6 @@ const ContactNavbar = ({ setModalOpen }) => {
       <div
         className="contact-icon"
         title="Contact me"
-        onClick={() => setModalOpen(true)}
         style={{ marginRight: "1.8rem", cursor: "pointer" }}
       >
         <GrContact size="4rem" />

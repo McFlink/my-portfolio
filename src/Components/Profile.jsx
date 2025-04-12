@@ -5,6 +5,19 @@ import profilePic from "../assets/images/me.jpg";
 
 const Profile = () => {
   const [doneTyping, setDoneTyping] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setScrolled(scrollY > 400);
+    };
+
+    // Sätt ett "stopp" på scroll-event när man scrollar upp så att bilden "åker in" på sin rätta position och sen fortsätter scrollen upp automatiskt.
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,7 +36,11 @@ const Profile = () => {
         Fullstack developer
       </p>
       <div>
-        <img src={profilePic} className="profile-pic" alt="Profile picture" />
+        <img
+          src={profilePic}
+          className={`profile-pic ${scrolled ? "scrolled" : ""}`}
+          alt="Profile picture"
+        />
       </div>
       {/* <p className="typing-text">var statement = "Fullstack developer";</p> */}
       <div className="about-me">
