@@ -47,6 +47,12 @@ const ContactNavbar = () => {
       <div
         className="contact-icon"
         title="Contact me"
+        onClick={() => {
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+          });
+        }}
         style={{ marginRight: "1.8rem", cursor: "pointer" }}
       >
         <GrContact size="4rem" />

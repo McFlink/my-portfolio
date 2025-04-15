@@ -1,20 +1,24 @@
 .contact-modal-content {
-  padding: 20px;
+  max-width: 33rem;
+  margin: 7rem auto;
+  padding: 20px 50px;
+  background-color: rgb(28, 17, 56);
+  border-radius: 1rem;
+  color: white;
 }
 
 .contact-modal-content h2 {
-  margin-bottom: 20px;
+  margin-bottom: 0.8rem;
   text-align: center;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 0.5rem;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .form-group input,
@@ -27,7 +31,7 @@
 }
 
 .submit-btn {
-  background-color: #4caf50;
+  background-color: #aaaaaa;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -37,5 +41,11 @@
 }
 
 .submit-btn:hover {
-  background-color: #45a049;
+  background-color: #7a7a7a;
+}
+
+.recaptcha-container {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

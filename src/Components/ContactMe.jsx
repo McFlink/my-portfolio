@@ -1,30 +1,52 @@
 import emailjs from "@emailjs/browser";
 import "./ContactMe.css";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactModal = () => {
   const form = useRef();
+  const [fromName, setFromName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [captchaToken, setCaptchaToken] = useState("");
+
+  const onCaptchaChange = (token) => {
+    setCaptchaToken(token);
+  };
+
+  useEffect(() => {}, [fromName, email, subject, message]);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log("submit event:", e);
+    if (!captchaToken) {
+      alert("Confirm you are not a robot");
+      return;
+    }
 
     emailjs
       .sendForm(
-        "service_5ivq2dv",
-        "template_3upn26s",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "13ZrOJrJfq_-MT-Y8"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
-        (result) => {
-          console.log(result.text);
-          alert("Meddelandet har skickats!");
+        () => {
+          alert("Message sent successfully!");
+          setFromName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
         },
         (error) => {
           console.log(error.text);
-          alert("Något gick fel. Försök igen.");
+          alert(
+            "Something went wrong sending the message. Try again. Id the error persists, contact me directly at mikael.chris.flink@gmail.com."
+          );
         }
       );
   };
@@ -32,26 +54,60 @@ const ContactModal = () => {
   return (
     <>
       <div className="contact-modal-content">
-        <h2>Kontakta mig</h2>
+        <h2>Let's talk!</h2>
         <form ref={form} onSubmit={sendEmail}>
           <div className="form-group">
-            <label htmlFor="from_name">Namn</label>
-            <input type="text" id="from_name" name="from_name" required />
+            <label htmlFor="from_name">Name</label>
+            <input
+              type="text"
+              id="from_name"
+              name="from_name"
+              value={fromName}
+              onChange={(e) => setFromName(e.target.value)}
+              required
+            />
           </div>
           <div className="form-group">
-            <label htmlFor="email">E-post</label>
-            <input type="email" id="email" name="email" required />
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
           </div>
           <div className="form-group">
-            <label htmlFor="subject">Ämne</label>
-            <input type="text" id="subject" name="subject" required />
+            <label htmlFor="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              required
+            />
           </div>
           <div className="form-group">
-            <label htmlFor="message">Meddelande</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              rows="5"
+              required
+            ></textarea>
           </div>
-          <button type="submit" className="submit-btn">
-            Skicka
+          <div className="recaptcha-container">
+            <ReCAPTCHA
+              sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+              onChange={onCaptchaChange}
+            />
+          </div>
+          <button type="submit" className="submit-btn" disabled={!captchaToken}>
+            Send
           </button>
         </form>
       </div>

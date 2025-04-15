@@ -24,7 +24,7 @@
 }
 
 .profile-pic {
-  width: 40%;
+  width: 25rem;
   height: auto;
   border-radius: 10%;
   object-fit: cover;
@@ -36,8 +36,8 @@
 .profile-pic.scrolled {
   position: fixed;
   top: 0%;
-  left: 53%;
-  width: 15%;
+  left: 52%;
+  width: 20rem;
   transform: translateX(32rem);
   transition: transform 0.6s ease-in-out;
   box-shadow: 0 4px 8px rgba(6, 247, 255, 0.856);

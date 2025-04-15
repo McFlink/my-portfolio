@@ -70,7 +70,7 @@ const Projects = () => {
     {
       title: "Pick-To-Light",
       description:
-        "A Pick-To-Light system I upgraded at Binar Solutions AB in Trollhättan, Sweden. Using Pick-To-Light technology, I built a system using light modules to streamline the Binar production department’s order management and assembly workflow. I also upgraded their UI/UX and added QR code scanning function to connect modules to orders. Built with .NET Framework 4.6 and React. TCP/IP communication with hardware controller (no link)",
+        "A Pick-To-Light system I upgraded at Binar Solutions AB in Trollhättan, Sweden. Using Pick-To-Light technology, I built a system using light modules to streamline the Binar production department’s order management and assembly workflow. I also upgraded their UI/UX and added QR code scanning function to connect modules to orders. Built with .NET Framework 4.6 and React. TCP/IP communication with hardware controller.",
       image: binarImg,
       link: "#",
       technologies: ["EF6", "ASP.NET", "React"],
