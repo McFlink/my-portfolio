@@ -1,0 +1,25 @@
+.e-dialog {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2) !important;
+  font-family: "Poppins", sans-serif !important;
+  padding: 1rem !important;
+}
+
+.e-dialog .e-dlg-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.e-dialog .e-dlg-content {
+  font-size: 1rem;
+  color: #333;
+}
+
+.e-dialog.success {
+  border-top: 4px solid #4caf50;
+}
+
+.e-dialog.error {
+  border-top: 4px solid #f44336;
+}

@@ -2,6 +2,7 @@ import emailjs from "@emailjs/browser";
 import "./ContactMe.css";
 import { useEffect, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import MessageDialog from "./MessageDialog";
 
 const ContactModal = () => {
   const form = useRef();
@@ -12,6 +13,9 @@ const ContactModal = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [captchaToken, setCaptchaToken] = useState("");
+  const [showDialog, setShowDialog] = useState(false);
+  const [dialogMessage, setDialogMessage] = useState("");
+  const [dialogType, setDialogType] = useState("info"); // "success", "error"
 
   const onCaptchaChange = (token) => {
     setCaptchaToken(token);
@@ -22,8 +26,12 @@ const ContactModal = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    console.log("Captcha token: ", captchaToken);
+
     if (!captchaToken) {
-      alert("Confirm you are not a robot");
+      setDialogMessage("Please confirm you're not a robot.");
+      setDialogType("error");
+      setShowDialog(true);
       return;
     }
 
@@ -36,7 +44,9 @@ const ContactModal = () => {
       )
       .then(
         () => {
-          alert("Message sent successfully!");
+          setDialogMessage("Message sent successfully!");
+          setDialogType("success");
+          setShowDialog(true);
           setFromName("");
           setEmail("");
           setSubject("");
@@ -44,9 +54,11 @@ const ContactModal = () => {
         },
         (error) => {
           console.log(error.text);
-          alert(
+          setDialogMessage(
             "Something went wrong sending the message. Try again. Id the error persists, contact me directly at mikael.chris.flink@gmail.com."
           );
+          setDialogType("error");
+          setShowDialog(true);
         }
       );
   };
@@ -106,10 +118,16 @@ const ContactModal = () => {
               onChange={onCaptchaChange}
             />
           </div>
-          <button type="submit" className="submit-btn" disabled={!captchaToken}>
+          <button type="submit" className="submit-btn">
             Send
           </button>
         </form>
+        <MessageDialog
+          visible={showDialog}
+          message={dialogMessage}
+          onClose={() => setShowDialog(false)}
+          type={dialogType}
+        />
       </div>
     </>
   );
