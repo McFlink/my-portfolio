@@ -81,38 +81,40 @@ const Projects = () => {
     <div className="projects-container">
       <div className="projects">
         <h4>Projects</h4>
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className={`project-row ${index % 2 !== 0 ? "reverse" : ""}`}
-          >
-            <div className="project-description">
-              <p>{project.description}</p>
-            </div>
-            <div className="project-card">
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="card-link"
-              >
-                <div className="card-image">
-                  <img src={project.image} alt={project.title} />
-                </div>
-                <div className="card-body">
-                  <h5>{project.title}</h5>
-                  <div className="technologies">
-                    {project.technologies.map((tech, i) => (
-                      <span key={i} className="tech-tag">
-                        {tech}
-                      </span>
-                    ))}
+        <div className="project-div">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className={`project-row ${index % 2 !== 0 ? "reverse" : ""}`}
+            >
+              <div className="project-description">
+                <p>{project.description}</p>
+              </div>
+              <div className="project-card">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-link"
+                >
+                  <div className="card-image">
+                    <img src={project.image} alt={project.title} />
                   </div>
-                </div>
-              </a>
+                  <div className="card-body">
+                    <h5>{project.title}</h5>
+                    <div className="technologies">
+                      {project.technologies.map((tech, i) => (
+                        <span key={i} className="tech-tag">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

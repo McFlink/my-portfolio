@@ -15,17 +15,26 @@ const TopScrollButton = () => {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 400,
-      behavior: "smooth",
-    });
+    const isMobile = window.innerWidth < 768;
 
-    setTimeout(() => {
+    if (isMobile) {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
-    }, 1300);
+    } else {
+      window.scrollTo({
+        top: 400,
+        behavior: "smooth",
+      });
+
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }, 1300);
+    }
   };
 
   return (

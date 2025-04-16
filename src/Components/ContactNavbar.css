@@ -44,3 +44,43 @@
   transform: scale(1.1);
   color: rgb(255, 255, 255);
 }
+
+@media (max-width: 768px) {
+  .navbar-row {
+    top: 0;
+    left: 0;
+    transform: none;
+    justify-content: space-around;
+    width: 100%;
+    padding: 4rem 0;
+    z-index: 1000;
+    transition: none;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(to left, #050518, #120c36);
+  }
+
+  .navbar-row.scrolled {
+    top: 0;
+    left: 0;
+    transform: none;
+    justify-content: space-around;
+    width: 100%;
+    padding: 4rem 0;
+    z-index: 1000;
+    transition: none;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(to left, #050518, #120c36);
+  }
+
+  .navbar-row.scrolled .contact-icon {
+    margin-left: 0;
+  }
+
+  .navbar-row a {
+    margin-right: 0;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+}

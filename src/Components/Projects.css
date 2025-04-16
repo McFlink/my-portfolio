@@ -112,10 +112,35 @@
 }
 
 @media (max-width: 520px) {
+  .projects-container {
+    margin-top: 7rem;
+  }
+  .project-row,
+  .project-row.reverse {
+    display: flex;
+    flex-direction: column;
+  }
+
   .project-card {
-    width: 25rem;
+    width: 100%;
     height: 20rem;
-    border: 1px solid #000000;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(6, 247, 255, 0.856);
+    transform-style: preserve-3d;
+    margin-bottom: 0.7rem;
+    margin-top: 1rem;
+  }
+
+  .project-row .project-description {
+    order: 2;
+    width: 100%;
+    margin-top: 0;
+    border-bottom: 1px solid rgb(103, 104, 103);
+  }
+
+  .project-row .project-card {
+    order: 1;
+    width: 100%;
   }
 }

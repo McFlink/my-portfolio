@@ -99,3 +99,54 @@
   text-align: left;
   margin-bottom: 3rem;
 }
+
+@media (max-width: 768px) {
+  .profile-pic {
+    width: 80%;
+    height: auto;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-top: 4%;
+    transition: none;
+    box-shadow: 0 4px 8px rgba(6, 247, 255, 0.856);
+  }
+
+  .profile-pic.scrolled {
+    transition: none;
+    transform: none;
+    position: static;
+    width: 80%;
+  }
+
+  .hello-world {
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .fullstack-text {
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
+  }
+
+  .about-me h4 {
+    width: 39%;
+    text-align: left;
+    margin-bottom: 1.3rem;
+  }
+
+  .tech-stack-container h4 {
+    width: 44%;
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 88%;
+    }
+  }
+}

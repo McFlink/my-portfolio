@@ -29,10 +29,10 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      <p>
+      <p className="hello-world">
         Hello world! I'm <span className="name">Mikael C. Flink</span>
       </p>
-      <p className={`typing-text ${doneTyping ? "done" : ""}`}>
+      <p className={`fullstack-text typing-text ${doneTyping ? "done" : ""}`}>
         Fullstack developer
       </p>
       <div>

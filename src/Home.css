@@ -20,3 +20,9 @@ body.modal-open {
 .e-dlg-container {
   pointer-events: auto !important;
 }
+
+@media (max-width: 768px) {
+  .content-container {
+    width: 90%;
+  }
+}

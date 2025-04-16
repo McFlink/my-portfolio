@@ -14,3 +14,10 @@
 .tech-icons i:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  .tech-icons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}

@@ -23,6 +23,7 @@ const ContactNavbar = () => {
         rel="noopener noreferrer"
         title="My github profile"
         alt="Github profile"
+        className="github-icon"
       >
         <GrGithub size="4rem" />
       </a>
