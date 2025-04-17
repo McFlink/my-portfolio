@@ -1,5 +1,5 @@
 .profile-container {
-  margin-top: 40%;
+  margin-top: 31%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -100,6 +100,41 @@
   margin-bottom: 3rem;
 }
 
+.download-cv-btn {
+  background-color: rgba(6, 247, 255, 0.856);
+  color: white;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(6, 247, 255, 0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 4rem;
+  text-decoration: none;
+}
+
+.download-cv-btn:hover {
+  background-color: rgba(6, 247, 255, 1);
+  transform: scale(1.05);
+}
+
+/* .download-cv-btn {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download-cv-btn:hover {
+  background-color: #45a049;
+} */
+
 @media (max-width: 768px) {
   .profile-pic {
     width: 80%;
@@ -139,6 +174,11 @@
     width: 44%;
     text-align: left;
     margin-bottom: 3rem;
+  }
+
+  .download-cv-btn {
+    margin-top: 8rem;
+    margin-bottom: 0;
   }
 
   @keyframes typing {

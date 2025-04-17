@@ -29,6 +29,14 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
+      <a
+        href="/CV%202025.pdf"
+        download="Mikael_Flink_CV.pdf"
+        className="download-cv-btn"
+      >
+        Download Resume
+      </a>
+
       <p className="hello-world">
         Hello world! I'm <span className="name">Mikael C. Flink</span>
       </p>

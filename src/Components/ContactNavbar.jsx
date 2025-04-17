@@ -8,7 +8,7 @@ const ContactNavbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setScrolled(scrollY > 200);
+      setScrolled(scrollY > 190);
     };
 
     window.addEventListener("scroll", handleScroll);
