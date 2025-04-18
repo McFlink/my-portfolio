@@ -21,6 +21,36 @@ body.modal-open {
   pointer-events: auto !important;
 }
 
+.loader-container {
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #00f7ff;
+  transition: width 0.2s ease;
+}
+
+.loading-text {
+  font-family: "Fira Code", monospace;
+  letter-spacing: 1px;
+}
+
 @media (max-width: 768px) {
   .content-container {
     width: 90%;
