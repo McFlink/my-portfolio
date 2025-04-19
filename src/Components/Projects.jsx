@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import "./Projects.css";
 import aniadvImg from "../assets/images/ani-adv-game.png";
 import pixabayImg from "../assets/images/pixabay.png";
@@ -10,7 +10,17 @@ import timeReport from "../assets/images/Time-Report.png";
 import binarImg from "../assets/images/binar_pres.jpg";
 
 const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+
   const projects = [
+    {
+      title: "Pick-To-Light",
+      description:
+        "A Pick-To-Light system I upgraded at Binar Solutions AB in Trollhättan, Sweden. Using Pick-To-Light technology, I built a system using light modules to streamline the Binar production department’s order management and assembly workflow. I also upgraded their UI/UX and added QR code scanning function to connect modules to orders. Built with .NET Framework 4.6 and React. TCP/IP communication with hardware controller.",
+      image: binarImg,
+      link: "#",
+      technologies: ["EF6", "ASP.NET", "React"],
+    },
     {
       title: "Webshop",
       description:
@@ -67,22 +77,16 @@ const Projects = () => {
       link: "#",
       technologies: ["HTML", "CSS", "CSS Grid"],
     },
-    {
-      title: "Pick-To-Light",
-      description:
-        "A Pick-To-Light system I upgraded at Binar Solutions AB in Trollhättan, Sweden. Using Pick-To-Light technology, I built a system using light modules to streamline the Binar production department’s order management and assembly workflow. I also upgraded their UI/UX and added QR code scanning function to connect modules to orders. Built with .NET Framework 4.6 and React. TCP/IP communication with hardware controller.",
-      image: binarImg,
-      link: "#",
-      technologies: ["EF6", "ASP.NET", "React"],
-    },
   ];
+
+  const visibleProjects = showAll ? projects : projects.slice(0, 5);
 
   return (
     <div className="projects-container">
       <div className="projects">
         <h4>Projects</h4>
         <div className="project-div">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <div
               key={index}
               className={`project-row ${index % 2 !== 0 ? "reverse" : ""}`}
@@ -114,6 +118,16 @@ const Projects = () => {
               </div>
             </div>
           ))}
+          {projects.length > 5 && (
+            <div className="see-more-container">
+              <button
+                className="see-more-btn"
+                onClick={() => setShowAll(!showAll)}
+              >
+                {showAll ? "Show less" : "See more projects"}
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
