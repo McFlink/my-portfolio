@@ -8,6 +8,7 @@ import cvImg from "../assets/images/cv.png";
 import defaultImg from "../assets/images/defaultImg.jpg";
 import timeReport from "../assets/images/Time-Report.png";
 import binarImg from "../assets/images/binar_pres.jpg";
+import mpFishingImg from "../assets/images/gobble-site.png";
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
@@ -28,6 +29,14 @@ const Projects = () => {
       image: webshopImg,
       link: "https://github.com/McFlink/Fishing-Baits-Webshop",
       technologies: ["Razor", "MSSQL", "BS"],
+    },
+    {
+      title: "MpFishingSupply.se",
+      description:
+        "I developed the website for a distributor company I co-founded, specializing on delivering niche products to retail partners in the sportfishing industry.",
+      image: mpFishingImg,
+      link: "https://mpfishingsupply.se",
+      technologies: ["React", "Bootstrap", "CSS"],
     },
     {
       title: "Polarmotor.se",
@@ -69,13 +78,6 @@ const Projects = () => {
       image: aniadvImg,
       link: "https://github.com/McFlink/AnimalAdventure",
       technologies: ["React", "ASP.NET", "MSSQL"],
-    },
-    {
-      title: "CV",
-      description: "My CV. (CV not yet finished, currently no url)",
-      image: cvImg,
-      link: "#",
-      technologies: ["HTML", "CSS", "CSS Grid"],
     },
   ];
 
