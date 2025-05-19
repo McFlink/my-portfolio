@@ -43,7 +43,7 @@ const Profile = () => {
       <p className={`fullstack-text typing-text ${doneTyping ? "done" : ""}`}>
         Fullstack developer
       </p>
-      <div>
+      <div className="profile-pic-wrapper">
         <img
           src={profilePic}
           className={`profile-pic ${scrolled ? "scrolled" : ""}`}

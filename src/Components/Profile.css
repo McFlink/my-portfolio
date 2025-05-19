@@ -38,7 +38,7 @@
   top: 0%;
   left: 52%;
   width: 20rem;
-  transform: translateX(32rem);
+  transform: translateX(25rem);
   transition: transform 0.6s ease-in-out;
   box-shadow: 0 4px 8px rgba(6, 247, 255, 0.856);
   transition: width 0.6s ease-in-out, transform 0.6s ease-in-out,
